@@ -13,7 +13,7 @@ import CartPage from './container/CartPage/CartPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/test">
 
       <Header>
         <li><NavLink exact to="/">Home</NavLink></li>
@@ -24,7 +24,7 @@ function App() {
       </Header>
 
       <Switch>
-        <Route path="/" exact component={HomePage} />
+        <Route path="/" exact component={HomePage} />`
         <Route path="/shop" exact component={ShopPage} />
         <Route path="/shop/:productId" component={ProductGetAPI} />
         <Route path="/promotion" component={PromotionPage} />
